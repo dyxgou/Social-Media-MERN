@@ -21,7 +21,6 @@
   background-color: var(--grayBlue);
   padding: 15px;
   margin: 15px;
-  
   transition: .5s;
   text-decoration: underline;
 }

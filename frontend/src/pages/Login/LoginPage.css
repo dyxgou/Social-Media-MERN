@@ -1,0 +1,131 @@
+.login
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__icon
+{
+  color: white;
+}
+
+::-webkit-input-placeholder
+{
+  color: white;
+}
+
+.login__form
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.login__form > button
+{
+  border: none;
+  outline: none;
+  background-color: var(--red);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: .5s;
+
+}
+
+.login__form > button:hover
+{
+  padding: 15px 60px;
+  transition: .5s;
+  cursor: pointer;
+
+}
+
+.login__card
+{
+  padding: 25px;
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.295);
+  border-radius: 30px;
+
+}
+
+.login__card > h1
+{
+  color: var(--blue);
+  text-align: center;
+  cursor: pointer;
+}
+
+.login__inputContainer
+{
+  display: flex;
+  align-items: center;
+  background-color: var(--blue);
+  padding: 15px;
+  border-radius: 30px;
+  margin: 15px;
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.295);
+
+}
+
+.login__register
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+.login__register > span
+{
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.login__register > span:hover
+{
+  text-decoration: underline;
+} 
+
+.login__button
+{
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--grayBlue);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.login__button:hover
+{
+  padding: 15px 60px;
+  transition: .5s;
+}
+
+.login__inputContainer > input
+{
+  margin: 0 15px;
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-family: 'Rajdhani', sans-serif;
+  transition: .5s;
+}
+
+.login__inputContainer:hover > input
+{
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: .5s;
+
+}

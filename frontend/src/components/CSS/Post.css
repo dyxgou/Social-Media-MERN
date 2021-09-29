@@ -7,6 +7,19 @@
 }
 
 
+
+.post__likeIcon
+{
+  display: flex;
+  align-items: center;
+}
+
+.post__likeIcon > span
+{
+  color: black;
+  margin: 10px;
+}
+
 .post__config
 {
   display: flex;

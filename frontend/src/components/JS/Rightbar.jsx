@@ -31,21 +31,21 @@ const Rightbar = () => {
 
 
       <div className="rightbar__friends">
-      <h3  >Friends Connected</h3>
+      <h3  >Friends Online</h3>
       <SidebarFriend 
           avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
           name="iDiego"
-          isConnected={false}
+          isConnected={true}
         />
         <SidebarFriend 
           avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
           name="iDiego"
-          isConnected={false}
+          isConnected={true}
         />
         <SidebarFriend 
           avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
           name="iDiego"
-          isConnected={false}
+          isConnected={true}
         />
       </div>
 

@@ -1,0 +1,31 @@
+.profile
+{
+  width: 100%;
+}
+
+.profile__container
+{
+  display: flex;
+
+}
+
+.profile__user
+{
+  overflow: hidden;
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.295);
+  width: 75%;
+  margin: 25px 10px;
+  border-radius: 60px;
+}
+
+.profile__info
+{
+  display: flex;
+  margin: 30px 25px;
+}
+
+.profile__posts
+{
+  width: 100%;
+}
+

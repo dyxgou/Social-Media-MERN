@@ -28,3 +28,12 @@
   
 }
 
+
+
+.rightbar__friends > h3:hover
+{
+  color: whitesmoke;
+  border-radius: 30px;
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.603);
+
+}
