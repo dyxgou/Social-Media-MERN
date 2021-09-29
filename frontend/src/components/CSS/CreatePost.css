@@ -1,0 +1,29 @@
+.createPost
+{
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.295);
+  padding: 25px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.createPost__info
+{
+  display: flex;
+  align-items: center;
+
+}
+
+.createPost__postIcons
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createPost__input
+{
+  flex: 1;
+  margin: 15px;
+}

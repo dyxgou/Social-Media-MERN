@@ -1,0 +1,22 @@
+.sidebar
+{
+  flex: 2.5;
+  height: calc(100vh - 50px);
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.295);
+  border-radius: 60px;
+  margin: 25px ;
+  height: 100%;
+}
+
+.sidebar__wrapper
+{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+::-webkit-scrollbar
+{
+  display: none;
+}
+

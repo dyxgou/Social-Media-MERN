@@ -1,0 +1,27 @@
+.postIcon
+{
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 10px;
+  transition: .5s;
+
+}
+
+.postIcon > h4
+{
+  margin: 5px;
+}
+
+.postIcon__icon
+{
+  height: 35px !important;
+  width: 35px !important;
+}
+
+.postIcon:hover
+{
+  margin: 20px;
+  background-color: var(--grayBlue);
+  transition: .5s;
+}

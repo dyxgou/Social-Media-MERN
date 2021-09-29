@@ -1,0 +1,58 @@
+.stats
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0 ;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.rightbar__friends > h3
+{
+  text-align: center;
+  margin:  15px 0;
+  transition: .5s;
+
+}
+
+.rightbar__friends > h3:hover
+{
+  background-color: var(--grayBlue);
+  padding: 15px;
+  margin: 15px;
+  
+  transition: .5s;
+  text-decoration: underline;
+}
+
+.stats > span
+{
+  font-size: 18px;
+  display: none;
+}
+
+.stats:hover
+{
+  box-shadow: 5px -5px 15px rgba(134, 134, 134, 0.582);
+  transition: .5s;
+  background-color: whitesmoke;
+  padding-bottom: 20px;
+}
+
+.stats > h2
+{
+  font-size: 15px;
+}
+
+.stats:hover > span
+{
+  text-decoration: underline;
+  display: flex;
+}
+
+.stats__icon
+{
+  height: 40px !important;
+  width: 40px !important;
+}

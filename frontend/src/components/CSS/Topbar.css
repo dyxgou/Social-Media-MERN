@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+/* font-family: 'Rajdhani', sans-serif; */
+
+.topbar
+{
+  z-index: 999;
+  height: 50px;
+  display: flex; 
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--blue);
+}
+
+.topbar__left
+{
+  flex: 3;
+}
+
+.topbar__inputContainer
+{
+  display: flex;
+  align-items: center;
+
+}
+
+.topbar__inputContainer > input
+{
+  border: none ; 
+  outline: none;
+  flex: 1;
+  background: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  color: rgb(63, 63, 63);
+  transition: .5s;
+}
+
+.topbar__right
+{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__links
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.topbar__links > span:hover
+{
+  background: var(--grayBlue);
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.topbar__links > span
+{
+  margin: 0 15px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.topbar__icons
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topbar__inputContainer:hover > input
+{
+  margin-left: 20px;
+  color: black;
+  transition: .5s;
+}
+
+.topbar__search
+{
+  background-color: white;
+  padding: 10px;
+  border-radius: 30px;
+
+}
+
+.topbar__logo
+{
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+}
+
+.topbar__logoImg
+{
+  display: none !important;
+  margin-right: 5px;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.topbar__item
+{
+  position: relative;
+  margin: 15px;
+}
+
+.topbar__item > span
+{
+  background: var(--red);
+  color: white;
+  font-size: 10px;
+  border-radius: 100%;
+  padding: 2px 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.topbar__itemIcon
+{
+  color: white;
+
+}
+
+.topbar__logo:hover
+{
+  margin-left: 60px;
+  transition-duration: .5s;
+}
+.topbar__logo:hover > .topbar__logoImg
+{
+  transition-duration: 1s;
+  opacity: 100;
+  display: flex !important;
+}
+
+.topbar__center
+{
+  flex: 5;
+  
+}
+
+.topbar__right
+{
+  flex: 4;
+}
