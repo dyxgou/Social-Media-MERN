@@ -134,12 +134,12 @@ router.get("/:id" , async(req , res) =>
 
 // ? get timelime post 
 
-router.get("/timeline/all" , async(req , res )=>
+router.get("/timeline/:userId" , async(req , res )=>
 {
   //let postArray = []
   try
   {
-    const currentUser = await UserModel.findById(req.body.userId)
+    const currentUser = await UserModel.findById(req.params.userId)
     const userPost = await Post.find({ userId : currentUser._id })
     const friendPosts =  await Promise.all(
       currentUser.followings.map(friendId => 

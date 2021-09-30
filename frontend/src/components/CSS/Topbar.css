@@ -136,6 +136,12 @@
 
 }
 
+.topbar__logoText
+{
+  color: white;
+  text-decoration: none;
+  
+}
 .topbar__logo:hover
 {
   margin-left: 60px;

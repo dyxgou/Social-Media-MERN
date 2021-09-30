@@ -3,11 +3,23 @@ import {Avatar, IconButton} from "@mui/material"
 import { Settings } from "@mui/icons-material"
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "../../data/axios"
+import { format } from "timeago.js"
 
-const Post = ({ avatar , name="" , timestamp , likes=0, image , desc="" , comments=0 }) => {
+const Post = ({ post }) => {
 
+  const [ user , setuser ] = useState({})
 
+  useEffect(() =>
+  {
+    const fetchUser = async () =>
+    {
+      const res = await axios.get(`users/${post.userId}`)
+      return setuser(res.data)
+    }
+    return fetchUser()
+  } , [post.userId])
   
 
   const useLiked = ({ initialState , initialClickState }) =>
@@ -35,21 +47,21 @@ const Post = ({ avatar , name="" , timestamp , likes=0, image , desc="" , commen
     }
   }
 
-  const likeIt = useLiked({ initialState:0 , initialClickState:false })
-  const loveIt = useLiked({ initialState:0 , initialClickState:false })
+  const likeIt = useLiked({ initialState:post.likes.length , initialClickState:false })
+  const loveIt = useLiked({ initialState:post.likes.length , initialClickState:false })
   
 
   return (
     <div className="post" >
       <div className="post__config">
         <div className="post__user" >
-          { avatar ? (
-            <Avatar src={avatar} />
+          { user.profilePicture ? (
+            <Avatar src={user?.profilePicture} />
           ) : (
-            <Avatar> {name[0]} </Avatar>
+            <Avatar/>
           ) }
-          <h3>{name}</h3>
-          <p>{timestamp}</p>
+          <h3>{user?.username}</h3>
+          <p>{format(post?.createdAt)}</p>
 
         </div>
         <IconButton>
@@ -60,11 +72,11 @@ const Post = ({ avatar , name="" , timestamp , likes=0, image , desc="" , commen
             
       <div className="post__content">
 
-        { desc && <p> { desc } </p> }
+        { post.desc && <p> { post.desc } </p> }
 
-        { image && <div onDoubleClick={loveIt.valueHandler} >
+        { post.img && <div onDoubleClick={loveIt.valueHandler} >
           <img 
-          src={image} 
+          src={post.img} 
           alt="It is the imagePost" 
           className="post__image" /> 
         </div>
@@ -104,9 +116,6 @@ const Post = ({ avatar , name="" , timestamp , likes=0, image , desc="" , commen
           </div>
         </div>
 
-        <h5>
-          {comments === 0 ? "" : `${comments} comments`}
-        </h5>
       </div>
 
     </div>

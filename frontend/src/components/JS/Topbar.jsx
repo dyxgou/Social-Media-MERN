@@ -2,6 +2,7 @@ import "../CSS/Topbar.css"
 import { Search , Person , Chat , NotificationAdd } from "@mui/icons-material"
 import { Avatar, IconButton } from "@mui/material"
 import ComputerIcon from '@mui/icons-material/Computer';
+import { Link } from "react-router-dom"
 
 
 const Topbar = () => {
@@ -10,7 +11,9 @@ const Topbar = () => {
       <div className="topbar__left">
         <div className="topbar__logo" >
           <ComputerIcon className="topbar__logoImg" />
-          <span className="topbar__logoText">LamaSocial</span>
+          <Link to="/" style={{textDecoration : "none"}} >
+            <span className="topbar__logoText">LamaSocial</span>
+          </Link>
         </div>
       </div>
       <div className="topbar__center">

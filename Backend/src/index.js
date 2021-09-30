@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import helmet from "helmet"
 import morgan from 'morgan'
+import Cors from "cors"
 
 // Importing Files 
 
@@ -27,6 +28,7 @@ const port = process.env.PORT || 8000;
 app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
+app.use(Cors())
 
 // Routes
 app.get('/' , (req , res)=>{

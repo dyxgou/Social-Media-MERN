@@ -1,8 +1,24 @@
+import { useEffect, useState } from "react"
 import "../CSS/Feed.css"
 import CreatePost from "./CreatePost"
+import axios from "../../data/axios"
 import Post from "./Post"
 
 const Feed = () => {
+
+  const [ posts , setPosts ] = useState([])
+
+  useEffect(() =>
+  {
+    const fetchPosts = async () =>
+    {
+      const res = await axios.get("posts/timeline/6150b054ba2dd8f088fb565a")
+      return setPosts(res.data)
+    }
+
+    return fetchPosts()
+  } , [posts])
+
   return (
     <div className="feed" >
       {/* It is the Section to create a new Post */}
@@ -10,42 +26,22 @@ const Feed = () => {
 
       {/* Here, we're going to share all the post with a map from the db */}
 
-      <Post 
-        avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        name="iDiego"
-        timestamp={new Date().toUTCString().split(" ")[4]}
-        desc="Hey, it is my first post!"
-        image="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        likes={5}
-        comments={5}
-      />
-      <Post 
-        avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        name="iDiego"
-        timestamp={new Date().toUTCString().split(" ")[4]}
-        desc="Hey, it is my first post!"
-        image="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        likes={5}
-        comments={5}
-      />
-      <Post 
-        avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        name="iDiego"
-        timestamp={new Date().toUTCString().split(" ")[4]}
-        desc="Hey, it is my first post!"
-        image="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        likes={5}
-        comments={5}
-      />
-      <Post 
-        avatar="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        name="iDiego"
-        timestamp={new Date().toUTCString().split(" ")[4]}
-        desc="Hey, it is my first post!"
-        image="https://cdn.discordapp.com/attachments/863856887102701589/892194761958645760/images.png"
-        likes={5}
-        comments={5}
-      />
+      {
+        posts.map(post => 
+          {
+            return (
+              <Post 
+                key={post._id}
+                // userId={"6150b054ba2dd8f088fb565a"}
+                // desc={post.desc}
+                // image={post.img}
+                // timestamp={post.createdAt}
+                post={post}
+              />
+            )
+          }
+        )
+      }
       
       
     </div>
